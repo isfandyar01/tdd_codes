@@ -1,0 +1,10 @@
+compiling CircularBufferTest.cpp
+compiling AllTests.cpp
+compiling CircularBuffer.c
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+.
+OK (1 tests, 1 ran, 0 checks, 0 ignored, 0 filtered out, 0 ms)
+
