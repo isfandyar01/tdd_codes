@@ -1,0 +1,40 @@
+{
+  "filename_extension": [
+    ".c",
+    ".h",
+    ".cpp"
+  ],
+  "highlight_filenames": [
+    "CircularBuffer.c",
+    "CircularBuffer.h",
+    "CircularBufferTest.cpp"
+  ],
+  "display_name": "C CircularBuffer V1 -- Your First TDD",
+  "image_name": "jwgrenning/wingman-build",
+  "progress_regexs": [
+    "Errors (.* ms)",
+    "OK (.* ms)"
+  ],
+  "theme": "light",
+  "colour": "on",
+  "predict": "off",
+  "revert_red": "off",
+  "revert_amber": "off",
+  "revert_green": "off",
+  "version": 2,
+  "created": [
+    2023,
+    3,
+    14,
+    12,
+    39,
+    19,
+    444135
+  ],
+  "exercise": "",
+  "tab_size": 4,
+  "max_seconds": 10,
+  "group_id": "VqzY9S",
+  "group_index": 19,
+  "id": "rCbPhl"
+}
