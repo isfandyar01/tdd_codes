@@ -10,7 +10,7 @@ CircularBufferTest.cpp:43: error: Failure in TEST(CircularBuffer, create_destroy
 	Start here
 
 .
-Errors (1 failures, 1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 25 ms)
+Errors (1 failures, 1 tests, 1 ran, 1 checks, 0 ignored, 0 filtered out, 2 ms)
 
 CircularBuffer_tests returned 1
 make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1
