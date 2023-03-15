@@ -1,9 +1,8 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-In file included from CircularBuffer.c:6:
-CircularBuffer.h:14:29: error: unknown type name 'CircularBuffer'
-   14 | bool CircularBuffer_IsEmpty(CircularBuffer *);
+CircularBuffer.c:26:29: error: unknown type name 'CircularBuffer'
+   26 | bool CircularBuffer_IsEmpty(CircularBuffer *self)
       |                             ^~~~~~~~~~~~~~
 compilation terminated due to -Wfatal-errors.
 make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
