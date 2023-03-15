@@ -5,6 +5,7 @@
 
 #ifndef CIRCULAR_BUFFER_INCLUDED
 #define CIRCULAR_BUFFER_INCLUDED
+#include <stdbool.h>
 
 struct CircularBuffer;
 
