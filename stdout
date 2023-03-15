@@ -1,8 +1,10 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c:26:29: error: unknown type name 'CircularBuffer'
-   26 | bool CircularBuffer_IsEmpty(CircularBuffer *self)
-      |                             ^~~~~~~~~~~~~~
+CircularBuffer.c: In function 'CircularBuffer_IsEmpty':
+CircularBuffer.c:29:12: error: 'False' undeclared (first use in this function); did you mean 'false'?
+   29 |     return False;
+      |            ^~~~~
+      |            false
 compilation terminated due to -Wfatal-errors.
 make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
