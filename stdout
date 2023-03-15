@@ -5,45 +5,6 @@ Building archive lib/libCircularBuffer.a
 a - objs/CircularBuffer.o
 Linking CircularBuffer_tests
 Running CircularBuffer_tests
-.
-OK (1 tests, 1 ran, 0 checks, 0 ignored, 0 filtered out, 0 ms)
+..
+OK (2 tests, 2 ran, 1 checks, 0 ignored, 0 filtered out, 0 ms)
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!                                                        !!
-!!          YOUR CODE GOT AHEAD OF YOUR TESTS!            !!
-!!                                                        !!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
-You get this message when you write code that is not yet exercised by
-your current test cases.
-
-The coverage report below may show
-
- * "LINE NEVER EXECUTED" 
- * "BRANCH NEVER TAKEN IN PREVIOUS CONDITIONAL"
-
-Delete (or comment out) the code that is not yet needed.
-
-Try to avoid getting this message by doing TDD!
-  Work in small steps
-  Write a test
-  Watch it fail (maybe due to build errors)
-  Make it pass with the simplest implementation
-  Continue
-
-See the exercise hints
---------------------------------------------------------------
-        1:   20:void CircularBuffer_Destroy(struct CircularBuffer * self)
-        -:   21:{
-        1:   22:    free(self);
-        1:   23:}
-        -:   24:
-        -:   25:
-    #####:   26:bool CircularBuffer_IsEmpty(struct CircularBuffer *self) <<<<---- LINE NEVER EXECUTED ----<<<<
-        -:   27:{
-        -:   28:
-    #####:   29:    return true; <<<<---- LINE NEVER EXECUTED ----<<<<
-        -:   30:};
-        -:   31:  
---------------------------------------------------------------

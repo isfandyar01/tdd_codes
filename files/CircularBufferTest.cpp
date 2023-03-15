@@ -27,20 +27,7 @@ TEST_GROUP(CircularBuffer)
 
 TEST(CircularBuffer, create_destroy)
 {
-/*
- *  Un-comment the FAIL below to see the test case fail
- *  Note: the error message shows file and line number
- *    Your first test is done. It creates and destroys a
- *    CircularBuffer.
- *  Once you see this test fail, delete the everything
- *  between the curly braces.
- *
- *  CppUTest calls setup() before each test case
- *  and calls teardown() after every test case.
- *  Each test gets a brand new CircularBuffer.
- */ 
 
-  // FAIL(CircularBuffer_Destroy(buffer));
 }
 
 /*
@@ -58,7 +45,7 @@ TEST(CircularBuffer, create_destroy)
 
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+//#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /*
  * Discussion with James about next test:
  * How do we choose the first test? Let's test initialization.
@@ -71,7 +58,7 @@ TEST(CircularBuffer, is_empty_after_creation)
 {
     CHECK_TRUE(CircularBuffer_IsEmpty(buffer));
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
