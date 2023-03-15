@@ -1,8 +1,9 @@
 compiling CircularBufferTest.cpp
-In file included from CircularBufferTest.cpp:10:
-CircularBuffer.h:13:29: error: 'CirularBuffer' was not declared in this scope; did you mean 'CircularBuffer'?
-   13 | bool CircularBuffer_IsEmpty(CirularBuffer *);
-      |                             ^~~~~~~~~~~~~
-      |                             CircularBuffer
+compiling AllTests.cpp
+compiling CircularBuffer.c
+In file included from CircularBuffer.c:6:
+CircularBuffer.h:13:1: error: unknown type name 'bool'
+   13 | bool CircularBuffer_IsEmpty(CircularBuffer *);
+      | ^~~~
 compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
