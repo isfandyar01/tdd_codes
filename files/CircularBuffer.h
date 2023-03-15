@@ -10,5 +10,5 @@ struct CircularBuffer;
 
 struct CircularBuffer * CircularBuffer_Create(void);
 void CircularBuffer_Destroy(struct CircularBuffer *);
-
+bool CircularBuffer_IsEmpty(CirularBuffer *);
 #endif
