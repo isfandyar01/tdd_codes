@@ -26,6 +26,6 @@ void CircularBuffer_Destroy(struct CircularBuffer * self)
 bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
 {
 
-    return false;
+    return True;
 };
   

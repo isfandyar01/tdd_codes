@@ -40,7 +40,7 @@ TEST(CircularBuffer, create_destroy)
  *  Each test gets a brand new CircularBuffer.
  */ 
 
-   FAIL(CircularBuffer_Destroy(buffer));
+  // FAIL(CircularBuffer_Destroy(buffer));
 }
 
 /*

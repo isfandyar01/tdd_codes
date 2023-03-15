@@ -1,15 +1,10 @@
 compiling CircularBufferTest.cpp
-In file included from /cpputest/include/CppUTest/TestHarness.h:40,
-                 from CircularBufferTest.cpp:6:
-CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_create_destroy_Test::testBody()':
-CircularBufferTest.cpp:43:31: error: invalid use of void expression
-   43 |    FAIL(CircularBuffer_Destroy(buffer));
-      |         ~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
-/cpputest/include/CppUTest/UtestMacros.h:342:39: note: in definition of macro 'FAIL_LOCATION'
-  342 |   do { UtestShell::getCurrent()->fail(text,  file, line); } while(0)
-      |                                       ^~~~
-CircularBufferTest.cpp:43:4: note: in expansion of macro 'FAIL'
-   43 |    FAIL(CircularBuffer_Destroy(buffer));
-      |    ^~~~
+compiling AllTests.cpp
+compiling CircularBuffer.c
+CircularBuffer.c: In function 'CircularBuffer_IsEmpty':
+CircularBuffer.c:29:12: error: 'True' undeclared (first use in this function); did you mean 'true'?
+   29 |     return True;
+      |            ^~~~
+      |            true
 compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
