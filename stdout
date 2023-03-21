@@ -1,7 +1,9 @@
 compiling CircularBufferTest.cpp
-CircularBufferTest.cpp: In member function 'virtual void TEST_GROUP_CppUTestGroupCircularBuffer::setup()':
-CircularBufferTest.cpp:19:39: error: too many arguments to function 'CircularBuffer* CircularBuffer_Create()'
-   19 |         buffer = CircularBuffer_Create(buffer);
-      |                  ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
+compiling AllTests.cpp
+compiling CircularBuffer.c
+CircularBuffer.c: In function 'CircularBuffer_Capacity':
+CircularBuffer.c:61:18: error: invalid application of 'sizeof' to incomplete type 'int[]'
+   61 |     return sizeof(self->values);
+      |                  ^
 compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
