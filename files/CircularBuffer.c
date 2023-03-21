@@ -35,7 +35,7 @@ bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
     return self->input_index==self->output_index;
 };
   
-bool  CircularBuffer_IsFull(struct CircularBuffer *)
+bool  CircularBuffer_IsFull(struct CircularBuffer * self)
 {   
     
     size_t NumberOfElements = sizeof(self->capacity)/sizeof(self->values[0]);
