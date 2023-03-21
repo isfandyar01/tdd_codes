@@ -1,8 +1,7 @@
 compiling CircularBufferTest.cpp
-compiling AllTests.cpp
-compiling CircularBuffer.c
-CircularBuffer.c:18:25: error: conflicting types for 'CircularBuffer_Create'; have 'struct CircularBuffer *(size_t,  int)' {aka 'struct CircularBuffer *(long unsigned int,  int)'}
-   18 | struct CircularBuffer * CircularBuffer_Create(size_t capacity, int default_value)
-      |                         ^~~~~~~~~~~~~~~~~~~~~
+CircularBufferTest.cpp: In member function 'virtual void TEST_GROUP_CppUTestGroupCircularBuffer::setup()':
+CircularBufferTest.cpp:19:39: error: too many arguments to function 'CircularBuffer* CircularBuffer_Create()'
+   19 |         buffer = CircularBuffer_Create(buffer);
+      |                  ~~~~~~~~~~~~~~~~~~~~~^~~~~~~~
 compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
