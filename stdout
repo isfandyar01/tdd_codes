@@ -1,7 +1,7 @@
 compiling CircularBufferTest.cpp
-CircularBufferTest.cpp: In member function 'virtual void TEST_GROUP_CppUTestGroupCircularBuffer::setup()':
-CircularBufferTest.cpp:19:39: error: too few arguments to function 'CircularBuffer* CircularBuffer_Create(int, int)'
-   19 |         buffer = CircularBuffer_Create(2);
-      |                  ~~~~~~~~~~~~~~~~~~~~~^~~
+CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_create_sets_capacity_Test::testBody()':
+CircularBufferTest.cpp:210:52: error: too few arguments to function 'CircularBuffer* CircularBuffer_Create(int, int)'
+  210 |     CircularBuffer * buffer = CircularBuffer_Create(2);
+      |                               ~~~~~~~~~~~~~~~~~~~~~^~~
 compilation terminated due to -Wfatal-errors.
 make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
