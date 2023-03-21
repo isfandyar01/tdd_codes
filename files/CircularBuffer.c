@@ -8,7 +8,8 @@
 
 struct CircularBuffer
 {
-    int needed_to_prevent_the_compiler_from_complaining_about_an_empty_struct;
+    int input_index;
+    int output_index;
 };
 
 struct CircularBuffer * CircularBuffer_Create(void)
@@ -26,6 +27,6 @@ void CircularBuffer_Destroy(struct CircularBuffer * self)
 bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
 {
 
-    return false;
+    return self->input_index==self->output_index;
 };
   
