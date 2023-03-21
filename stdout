@@ -5,14 +5,6 @@ Building archive lib/libCircularBuffer.a
 a - objs/CircularBuffer.o
 Linking CircularBuffer_tests
 Running CircularBuffer_tests
-.
-CircularBufferTest.cpp:195: error: Failure in TEST(CircularBuffer, report_capacity)
-	LONGS_EQUAL(10, CircularBuffer_Capacity(buffer)) failed
-	expected <10 (0xa)>
-	but was  < 2 (0x2)>
+.........
+OK (9 tests, 9 ran, 10 checks, 0 ignored, 0 filtered out, 0 ms)
 
-........
-Errors (1 failures, 9 tests, 9 ran, 10 checks, 0 ignored, 0 filtered out, 2 ms)
-
-CircularBuffer_tests returned 1
-make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1

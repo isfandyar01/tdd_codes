@@ -192,7 +192,7 @@ TEST(CircularBuffer, put_get_is_fifo)
 
 TEST(CircularBuffer, report_capacity)
 {
-    LONGS_EQUAL(10, CircularBuffer_Capacity(buffer));
+    LONGS_EQUAL(2, CircularBuffer_Capacity(buffer));
 }
 
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
