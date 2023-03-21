@@ -9,7 +9,7 @@
 
 struct CircularBuffer;
 
-struct CircularBuffer * CircularBuffer_Create(void);
+struct CircularBuffer * CircularBuffer_Create(size_t capacity, int default_value);
 void CircularBuffer_Destroy(struct CircularBuffer *);
 bool CircularBuffer_IsEmpty(struct CircularBuffer *);
 bool  CircularBuffer_IsFull(struct CircularBuffer *);
