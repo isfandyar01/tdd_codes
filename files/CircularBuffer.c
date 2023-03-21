@@ -25,9 +25,10 @@ struct CircularBuffer * CircularBuffer_Create(int capacity,int default_value)
 }
 
 void CircularBuffer_Destroy(struct CircularBuffer * self)
-{ 
-    free(self);
+{  
     free(self->values);
+    free(self);
+    
 }
 
 
