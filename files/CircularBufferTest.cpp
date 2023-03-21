@@ -354,12 +354,17 @@ TEST(CircularBuffer, is_not_full_after_get_from_full_buffer)
  */
 
 TEST(CircularBuffer, fill_to_capacity_then_empty)
-{
-    /*
-     * Write the test that fills the buffer
-     * Then takes all the items out and checks them
-     * Then confirm the buffer is empty
-     */
+{   CircularBuffer * buffer = CircularBuffer_Create(3,0);
+    CircularBuffer_Put(buffer, 1);
+    CircularBuffer_Put(buffer, 2);
+    CircularBuffer_Put(buffer, 3);
+
+    CircularBuffer_Get(buffer);
+    CircularBuffer_Get(buffer);
+    CircularBuffer_Get(buffer); 
+ 
+    CHECK_FALSE(CircularBuffer_IsEmpty(buffer));
+    CircularBuffer_Destroy(buffer);
 }
 
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */

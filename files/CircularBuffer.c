@@ -35,7 +35,7 @@ void CircularBuffer_Destroy(struct CircularBuffer * self)
 bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
 {
 
-    return self->input_index==self->output_index;
+    return self->count==0;
 };
   
 bool  CircularBuffer_IsFull(struct CircularBuffer * self)
