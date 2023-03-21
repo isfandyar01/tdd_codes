@@ -30,3 +30,7 @@ bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
     return self->input_index==self->output_index;
 };
   
+bool  CircularBuffer_IsFull(struct CircularBuffer *)
+{
+    return false;
+};
