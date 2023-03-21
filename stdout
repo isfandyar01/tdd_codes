@@ -1,7 +1,145 @@
 compiling CircularBufferTest.cpp
-CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_create_sets_capacity_Test::testBody()':
-CircularBufferTest.cpp:210:52: error: too few arguments to function 'CircularBuffer* CircularBuffer_Create(int, int)'
-  210 |     CircularBuffer * buffer = CircularBuffer_Create(2);
-      |                               ~~~~~~~~~~~~~~~~~~~~~^~~
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
+compiling AllTests.cpp
+compiling CircularBuffer.c
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+
+CircularBufferTest.cpp:273: error: Failure in TEST(CircularBuffer, is_full_when_filled_to_capacity)
+	Memory leak(s) found.
+Alloc num (5) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bb80> Content:
+    0000: 00 00 00 00 00 00 00 00                          |........|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:208: error: Failure in TEST(CircularBuffer, create_sets_capacity)
+	Memory leak(s) found.
+Alloc num (10) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bb40> Content:
+    0000: 53 65 74 50 6f 69 6e 74                          |SetPoint|
+Alloc num (8) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bb00> Content:
+    0000: 4d 65 6d 6f 72 79 4c 65                          |MemoryLe|
+Total number of leaks:  2
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:193: error: Failure in TEST(CircularBuffer, report_capacity)
+	Memory leak(s) found.
+Alloc num (13) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bbc0> Content:
+    0000: 54 45 53 54 28 43 69 72                          |TEST(Cir|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:157: error: Failure in TEST(CircularBuffer, put_get_is_fifo)
+	Memory leak(s) found.
+Alloc num (16) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bba0> Content:
+    0000: 01 00 00 00 02 00 00 00                          |........|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:132: error: Failure in TEST(CircularBuffer, put_get_one_value)
+	Memory leak(s) found.
+Alloc num (19) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bc20> Content:
+    0000: d7 11 00 00 67 65 74 5f                          |....get_|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:108: error: Failure in TEST(CircularBuffer, is_empty_after_put_then_get)
+	Memory leak(s) found.
+Alloc num (22) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bc40> Content:
+    0000: 2a 00 00 00 75 6c 61 72                          |*...ular|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:93: error: Failure in TEST(CircularBuffer, is_not_empty_after_put)
+	Memory leak(s) found.
+Alloc num (25) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bc60> Content:
+    0000: 3e 27 00 00 75 6c 61 72                          |>'..ular|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:70: error: Failure in TEST(CircularBuffer, is_not_full_after_creation)
+	Memory leak(s) found.
+Alloc num (28) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bc80> Content:
+    0000: 43 69 72 63 75 6c 61 72                          |Circular|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:57: error: Failure in TEST(CircularBuffer, is_empty_after_creation)
+	Memory leak(s) found.
+Alloc num (31) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bbe0> Content:
+    0000: 43 69 72 63 75 6c 61 72                          |Circular|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+CircularBufferTest.cpp:28: error: Failure in TEST(CircularBuffer, create_destroy)
+	Memory leak(s) found.
+Alloc num (34) Leak size: 8 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7f727010bc00> Content:
+    0000: 43 69 72 63 75 6c 61 72                          |Circular|
+Total number of leaks:  1
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+.
+Errors (10 failures, 10 tests, 10 ran, 10 checks, 0 ignored, 0 filtered out, 2 ms)
+
+CircularBuffer_tests returned 10
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 10

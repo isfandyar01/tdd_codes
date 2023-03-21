@@ -207,7 +207,7 @@ TEST(CircularBuffer, report_capacity)
 
 TEST(CircularBuffer, create_sets_capacity)
 {
-    CircularBuffer * buffer = CircularBuffer_Create(2);
+    CircularBuffer * buffer = CircularBuffer_Create(2,0);
     LONGS_EQUAL(2, CircularBuffer_Capacity(buffer));
     CircularBuffer_Destroy(buffer);
 }
