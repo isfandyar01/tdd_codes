@@ -366,7 +366,7 @@ TEST(CircularBuffer, fill_to_capacity_then_empty)
     CHECK_TRUE(CircularBuffer_IsEmpty(buffer));
     CircularBuffer_Destroy(buffer);
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
@@ -392,9 +392,17 @@ TEST(CircularBuffer, fill_to_capacity_then_empty)
 
 TEST(CircularBuffer, force_a_buffer_wraparound)
 {
-    // Write the test
+    CircularBuffer * buffer = CircularBuffer_Create(3,0);
+    CircularBuffer_Put(buffer, 1);
+    CircularBuffer_Put(buffer, 2);
+    CircularBuffer_Put(buffer, 3);
+    CircularBuffer_Get(buffer);
+    CircularBuffer_Put(buffer, 5);
+    CHECK(CircularBuffer_IsFull(buffer));
+    CircularBuffer_Destroy(buffer);
+    
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
