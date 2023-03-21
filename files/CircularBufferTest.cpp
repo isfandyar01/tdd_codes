@@ -363,7 +363,7 @@ TEST(CircularBuffer, fill_to_capacity_then_empty)
     CircularBuffer_Get(buffer);
     CircularBuffer_Get(buffer); 
  
-    CHECK_FALSE(CircularBuffer_IsEmpty(buffer));
+    CHECK_TRUE(CircularBuffer_IsEmpty(buffer));
     CircularBuffer_Destroy(buffer);
 }
 #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
