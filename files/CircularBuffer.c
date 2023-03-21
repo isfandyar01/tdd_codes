@@ -11,7 +11,7 @@ struct CircularBuffer
     int input_index;
     int output_index;
     int capacity;
-    int values[];
+    int values[10];
     
 };
 
