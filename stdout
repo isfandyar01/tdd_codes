@@ -1,7 +1,15 @@
 compiling CircularBufferTest.cpp
-CircularBufferTest.cpp: In member function 'virtual void TEST_GROUP_CppUTestGroupCircularBuffer::setup()':
-CircularBufferTest.cpp:19:39: error: too few arguments to function 'CircularBuffer* CircularBuffer_Create(size_t, int)'
-   19 |         buffer = CircularBuffer_Create();
-      |                  ~~~~~~~~~~~~~~~~~~~~~^~
+In file included from /cpputest/include/CppUTest/TestHarness.h:40,
+                 from CircularBufferTest.cpp:6:
+CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_report_capacity_Test::testBody()':
+CircularBufferTest.cpp:195:21: error: 'CircularBuffer_Capacity' was not declared in this scope; did you mean 'CircularBuffer_Create'?
+  195 |     LONGS_EQUAL(10, CircularBuffer_Capacity(buffer));
+      |                     ^~~~~~~~~~~~~~~~~~~~~~~
+/cpputest/include/CppUTest/UtestMacros.h:224:73: note: in definition of macro 'LONGS_EQUAL_LOCATION'
+  224 |   do { UtestShell::getCurrent()->assertLongsEqual((long)expected, (long)actual, text, file, line); } while(0)
+      |                                                                         ^~~~~~
+CircularBufferTest.cpp:195:5: note: in expansion of macro 'LONGS_EQUAL'
+  195 |     LONGS_EQUAL(10, CircularBuffer_Capacity(buffer));
+      |     ^~~~~~~~~~~
 compilation terminated due to -Wfatal-errors.
 make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
