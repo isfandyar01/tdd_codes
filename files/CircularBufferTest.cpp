@@ -275,7 +275,7 @@ TEST(CircularBuffer, is_full_when_filled_to_capacity)
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Put(buffer, 4);
     CircularBuffer_Put(buffer, 5);
-    INT_EQUALS(5,CircularBuffer_IsFull(buffer));
+    LONG_EQUALS(5,CircularBuffer_IsFull(buffer));
 }
 #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
