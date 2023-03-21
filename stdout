@@ -1,18 +1,10 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-
-CircularBufferTest.cpp:211: error: Failure in TEST(CircularBuffer, create_sets_capacity)
-	LONGS_EQUAL(2, CircularBuffer_Capacity(buffer)) failed
-	expected < 2 (0x2)>
-	but was  <10 (0xa)>
-
-.........
-Errors (1 failures, 9 tests, 9 ran, 10 checks, 0 ignored, 0 filtered out, 2 ms)
-
-CircularBuffer_tests returned 1
-make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1
+CircularBuffer.c: In function 'CircularBuffer_Create':
+CircularBuffer.c:22:16: error: returning 'int' from a function with return type 'struct CircularBuffer *' makes pointer from integer without a cast [-Werror=int-conversion]
+   22 |     return self->capacity;
+      |            ~~~~^~~~~~~~~~
+compilation terminated due to -Wfatal-errors.
+cc1: all warnings being treated as errors
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
