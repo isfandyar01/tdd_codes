@@ -315,5 +315,21 @@
       18,
       301174
     ]
+  },
+  {
+    "duration": 2.339844,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 20,
+    "time": [
+      2023,
+      3,
+      21,
+      8,
+      38,
+      10,
+      44377
+    ]
   }
 ]

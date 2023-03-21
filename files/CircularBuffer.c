@@ -41,3 +41,38 @@ void  CircularBuffer_Put(struct CircularBuffer *self, int value)
  self->input_index++;
  self->input_index=value;   
 }
+
+int  CircularBuffer_Get(struct CircularBuffer *self)
+{
+
+ self->output_index ++;
+    
+ return *self->output_index;   
+    
+}    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
