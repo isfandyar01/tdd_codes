@@ -275,10 +275,11 @@ TEST(CircularBuffer, is_full_when_filled_to_capacity)
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Put(buffer, 4);
     CircularBuffer_Put(buffer, 5);
-    CHECK_TRUE(CircularBuffer_IsFull(buffer));
+    CircularBuffer_Get(buffer);
+    CHECK_FALSE(CircularBuffer_IsFull(buffer));
     CircularBuffer_Destroy(buffer);
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /* Retrospective:
@@ -299,13 +300,14 @@ TEST(CircularBuffer, is_full_when_filled_to_capacity)
 
 TEST(CircularBuffer, is_not_full_after_get_from_full_buffer)
 {
-    /*
-     * write the test that fills the buffer
-     * takes one item out
-     * verifies that the buffer is not full anymore
-     */
+    CircularBuffer * buffer = CircularBuffer_Create(5,0);
+    CircularBuffer_Put(buffer, 1);
+    CircularBuffer_Put(buffer, 2);
+    CircularBuffer_Put(buffer, 3);
+    CircularBuffer_Put(buffer, 4);
+    CircularBuffer_Put(buffer, 5);
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
