@@ -10,7 +10,7 @@ CircularBufferTest.cpp:112: error: Failure in TEST(CircularBuffer, is_empty_afte
 	CHECK_TRUE(CircularBuffer_IsEmpty(buffer)) failed
 
 .....
-Errors (1 failures, 5 tests, 5 ran, 4 checks, 0 ignored, 0 filtered out, 3 ms)
+Errors (1 failures, 5 tests, 5 ran, 4 checks, 0 ignored, 0 filtered out, 2 ms)
 
 CircularBuffer_tests returned 1
 make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1

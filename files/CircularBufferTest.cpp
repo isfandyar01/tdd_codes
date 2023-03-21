@@ -107,7 +107,7 @@ TEST(CircularBuffer, is_not_empty_after_put)
 
 TEST(CircularBuffer, is_empty_after_put_then_get)
 {
-    //CircularBuffer_Put(buffer, 4567);
+    CircularBuffer_Put(buffer, 4567);
     CircularBuffer_Get(buffer);
     CHECK_TRUE(CircularBuffer_IsEmpty(buffer));
 }
