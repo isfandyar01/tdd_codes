@@ -15,9 +15,10 @@ struct CircularBuffer
     
 };
 
-struct CircularBuffer * CircularBuffer_Create(void)
+struct CircularBuffer * CircularBuffer_Create(int capacity)
 {
     struct CircularBuffer * self = (struct CircularBuffer *)calloc(1, sizeof(struct CircularBuffer));
+    self->capacity=capacity;
     return self;
 }
 
