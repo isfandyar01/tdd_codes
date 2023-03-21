@@ -34,3 +34,10 @@ bool  CircularBuffer_IsFull(struct CircularBuffer *)
 {
     return false;
 };
+
+
+void  CircularBuffer_Put(struct CircularBuffer *self, int value)
+{
+ self->input_index++;
+ self->input_index=value;   
+}
