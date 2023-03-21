@@ -1,10 +1,7 @@
 compiling CircularBufferTest.cpp
-compiling AllTests.cpp
-compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-.........
-OK (9 tests, 9 ran, 10 checks, 0 ignored, 0 filtered out, 0 ms)
-
+CircularBufferTest.cpp: In member function 'virtual void TEST_GROUP_CppUTestGroupCircularBuffer::setup()':
+CircularBufferTest.cpp:19:39: error: too few arguments to function 'CircularBuffer* CircularBuffer_Create(int, int)'
+   19 |         buffer = CircularBuffer_Create(2);
+      |                  ~~~~~~~~~~~~~~~~~~~~~^~~
+compilation terminated due to -Wfatal-errors.
+make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1

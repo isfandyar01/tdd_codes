@@ -211,7 +211,7 @@ TEST(CircularBuffer, create_sets_capacity)
     LONGS_EQUAL(2, CircularBuffer_Capacity(buffer));
     CircularBuffer_Destroy(buffer);
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 /*
  ***** NOTICE *****
@@ -274,7 +274,7 @@ TEST(CircularBuffer, is_full_when_filled_to_capacity)
 {
     // it's your turn to write the test
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /* Retrospective:

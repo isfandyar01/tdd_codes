@@ -11,14 +11,15 @@ struct CircularBuffer
     int input_index;
     int output_index;
     int capacity;
-    int values[10];
+    int * values;
     
 };
 
-struct CircularBuffer * CircularBuffer_Create(int capacity)
+struct CircularBuffer * CircularBuffer_Create(int capacity,int default_value)
 {
     struct CircularBuffer * self = (struct CircularBuffer *)calloc(1, sizeof(struct CircularBuffer));
-    self->capacity=capacity;
+    self->values = malloc(capacity * sizeof(int));
+    self->capacity = capacity;
     return self;
 }
 
