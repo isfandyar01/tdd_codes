@@ -1,9 +1,10 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c: In function 'CircularBuffer_Get':
-CircularBuffer.c:49:25: error: 'output_index' undeclared (first use in this function)
-   49 |  int value=self->values[output_index];
-      |                         ^~~~~~~~~~~~
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+......
+OK (6 tests, 6 ran, 5 checks, 0 ignored, 0 filtered out, 0 ms)
+
