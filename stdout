@@ -1,6 +1,10 @@
 compiling CircularBufferTest.cpp
-CircularBufferTest.cpp:138: error: unterminated #ifdef
-  138 | #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
-      | 
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
+compiling AllTests.cpp
+compiling CircularBuffer.c
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+.......
+OK (7 tests, 7 ran, 8 checks, 0 ignored, 0 filtered out, 0 ms)
+
