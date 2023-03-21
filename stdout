@@ -13,6 +13,17 @@ is_full_when_filled_to_capacity:271: error:
    deallocated at file: CircularBuffer.c line: 30 type: free
 
 
+
+CircularBufferTest.cpp:271: error: Failure in TEST(CircularBuffer, is_full_when_filled_to_capacity)
+is_full_when_filled_to_capacity:271: error:
+	Deallocating non-allocated memory
+   allocated at file: <unknown> line: 0 size: 0 type: unknown
+   deallocated at file: CircularBuffer.c line: 30 type: free
+Deallocating non-allocated memory
+   allocated at file: <unknown> line: 0 size: 0 type: unknown
+   deallocated at file: CircularBuffer.c line: 30 type: free
+
+
 .
 CircularBufferTest.cpp:206: error: Failure in TEST(CircularBuffer, create_sets_capacity)
 create_sets_capacity:206: error:
@@ -97,7 +108,7 @@ create_destroy:28: error:
 
 
 .
-Errors (11 failures, 10 tests, 10 ran, 10 checks, 0 ignored, 0 filtered out, 2 ms)
+Errors (12 failures, 10 tests, 10 ran, 10 checks, 0 ignored, 0 filtered out, 0 ms)
 
-CircularBuffer_tests returned 11
-make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 11
+CircularBuffer_tests returned 12
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 12
