@@ -11,7 +11,7 @@ struct CircularBuffer
     int input_index;
     int output_index;
     int capacity;
-    int values[];
+    int values[10];
     
 };
 
@@ -57,8 +57,10 @@ int  CircularBuffer_Get(struct CircularBuffer *self)
     
 }    
     
-    
-    
+int CircularBuffer_Capacity(struct CircularBuffer *self)
+{
+    return sizeof(self->values);
+}    
     
     
     

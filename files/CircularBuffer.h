@@ -15,4 +15,6 @@ bool CircularBuffer_IsEmpty(struct CircularBuffer *);
 bool  CircularBuffer_IsFull(struct CircularBuffer *);
 void  CircularBuffer_Put(struct CircularBuffer *, int);
 int  CircularBuffer_Get(struct CircularBuffer *);
+int CircularBuffer_Capacity(struct CircularBuffer *);
+
 #endif

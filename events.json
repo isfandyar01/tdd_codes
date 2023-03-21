@@ -635,5 +635,21 @@
       3,
       253044
     ]
+  },
+  {
+    "duration": 2.410655,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 40,
+    "time": [
+      2023,
+      3,
+      21,
+      10,
+      50,
+      50,
+      869269
+    ]
   }
 ]
