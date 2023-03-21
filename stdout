@@ -1,22 +1,9 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-
-CircularBufferTest.cpp:135: error: Failure in TEST(CircularBuffer, put_get_one_value)
-	LONGS_EQUAL(4567, CircularBuffer_Get(buffer)) failed
-	expected <4567 (0x11d7)>
-	but was  <   0 (0x0)>
-
-.
-CircularBufferTest.cpp:112: error: Failure in TEST(CircularBuffer, is_empty_after_put_then_get)
-	CHECK(CircularBuffer_IsEmpty(buffer)) failed
-
-.....
-Errors (2 failures, 6 tests, 6 ran, 5 checks, 0 ignored, 0 filtered out, 4 ms)
-
-CircularBuffer_tests returned 2
-make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 2
+CircularBuffer.c: In function 'CircularBuffer_Get':
+CircularBuffer.c:49:25: error: 'output_index' undeclared (first use in this function)
+   49 |  int value=self->values[output_index];
+      |                         ^~~~~~~~~~~~
+compilation terminated due to -Wfatal-errors.
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1

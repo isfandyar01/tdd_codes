@@ -10,6 +10,7 @@ struct CircularBuffer
 {
     int input_index;
     int output_index;
+    int values[10];
 };
 
 struct CircularBuffer * CircularBuffer_Create(void)
@@ -38,13 +39,14 @@ bool  CircularBuffer_IsFull(struct CircularBuffer *)
 
 void  CircularBuffer_Put(struct CircularBuffer *self, int value)
 {
- self->input_index++;
- self->input_index=value;   
+
+ self->values[self->input_index]=value;;
+ self->input_index++;   
 }
 
 int  CircularBuffer_Get(struct CircularBuffer *self)
 {
- int value=self->output_index;
+ int value=self->values[output_index];
  self->output_index++;
     
  return value;   
