@@ -1,8 +1,9 @@
 compiling CircularBufferTest.cpp
-CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_is_full_when_filled_to_capacity_Test::testBody()':
-CircularBufferTest.cpp:278:5: error: 'LONGS_EQUALS' was not declared in this scope; did you mean 'LONGS_EQUAL'?
-  278 |     LONGS_EQUALS(5,CircularBuffer_IsFull(buffer));
-      |     ^~~~~~~~~~~~
-      |     LONGS_EQUAL
+compiling AllTests.cpp
+compiling CircularBuffer.c
+CircularBuffer.c: In function 'CircularBuffer_IsFull':
+CircularBuffer.c:41:38: error: 'self' undeclared (first use in this function)
+   41 |     size_t NumberOfElements = sizeof(self->capacity)/sizeof(self->values[0]);
+      |                                      ^~~~
 compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
