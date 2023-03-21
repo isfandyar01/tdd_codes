@@ -16,7 +16,7 @@ TEST_GROUP(CircularBuffer)
 
     void setup()
     {
-        buffer = CircularBuffer_Create();
+        buffer = CircularBuffer_Create(2);
     }
 
     void teardown()
