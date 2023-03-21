@@ -275,8 +275,8 @@ TEST(CircularBuffer, is_full_when_filled_to_capacity)
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Put(buffer, 4);
     CircularBuffer_Put(buffer, 5);
-    CircularBuffer_Get(buffer);
-    CHECK_FALSE(CircularBuffer_IsFull(buffer));
+ 
+    CHECK_TRUE(CircularBuffer_IsFull(buffer));
     CircularBuffer_Destroy(buffer);
 }
 
@@ -306,6 +306,9 @@ TEST(CircularBuffer, is_not_full_after_get_from_full_buffer)
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Put(buffer, 4);
     CircularBuffer_Put(buffer, 5);
+    CircularBuffer_Get(buffer);
+    CHECK_FALSE(CircularBuffer_IsFull(buffer));
+    CircularBuffer_Destroy(buffer);
 }
 #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
