@@ -8,9 +8,9 @@
 
 struct CircularBuffer
 {
-    int input_index;
-    int output_index;
-    int capacity;
+    size_t input_index;
+    size_t output_index;
+    size_t capacity;
     int * values;
     
 };
