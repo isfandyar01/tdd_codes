@@ -1,8 +1,31 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c:15:5: error: expected ':', ',', ';', '}' or '__attribute__' before 'int'
-   15 |     int * values;
-      |     ^~~
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+
+CircularBufferTest.cpp:271: error: Failure in TEST(CircularBuffer, is_full_when_filled_to_capacity)
+	Memory leak(s) found.
+Alloc num (7) Leak size: 20 Allocated at: CircularBuffer.c and line: 22. Type: "malloc"
+	Memory: <0x7ffb705eaba0> Content:
+    0000: 01 00 00 00 02 00 00 00  03 00 00 00 04 00 00 00 |................|
+    0010: 05 00 00 00                                      |....|
+Alloc num (6) Leak size: 40 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
+	Memory: <0x7ffb705eafb0> Content:
+    0000: 05 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 |................|
+    0010: 05 00 00 00 00 00 00 00  05 00 00 00 00 00 00 00 |................|
+    0020: a0 ab 5e 70 fb 7f 00 00                          |..^p....|
+Total number of leaks:  2
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
+..........
+Errors (1 failures, 10 tests, 10 ran, 10 checks, 0 ignored, 0 filtered out, 1 ms)
+
+CircularBuffer_tests returned 1
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1
