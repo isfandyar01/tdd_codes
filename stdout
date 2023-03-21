@@ -1,10 +1,8 @@
 compiling CircularBufferTest.cpp
-compiling AllTests.cpp
-compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-...
-OK (3 tests, 3 ran, 2 checks, 0 ignored, 0 filtered out, 0 ms)
-
+CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_is_not_empty_after_put_Test::testBody()':
+CircularBufferTest.cpp:95:5: error: 'CircularBuffer_Put' was not declared in this scope; did you mean 'CircularBuffer'?
+   95 |     CircularBuffer_Put(buffer, 10046);
+      |     ^~~~~~~~~~~~~~~~~~
+      |     CircularBuffer
+compilation terminated due to -Wfatal-errors.
+make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
