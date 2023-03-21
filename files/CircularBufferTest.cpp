@@ -111,7 +111,7 @@ TEST(CircularBuffer, is_empty_after_put_then_get)
     CircularBuffer_Get(buffer);
     CHECK(CircularBuffer_IsEmpty(buffer));
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
@@ -134,7 +134,8 @@ TEST(CircularBuffer, put_get_one_value)
     CircularBuffer_Put(buffer, 4567);
     LONGS_EQUAL(4567, CircularBuffer_Get(buffer));
 }
-
+}
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
