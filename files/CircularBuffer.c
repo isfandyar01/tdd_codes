@@ -19,7 +19,7 @@ struct CircularBuffer * CircularBuffer_Create(int capacity)
 {
     struct CircularBuffer * self = (struct CircularBuffer *)calloc(1, sizeof(struct CircularBuffer));
     self->capacity=capacity;
-    return self->capacity;
+    return self;
 }
 
 void CircularBuffer_Destroy(struct CircularBuffer * self)
@@ -59,7 +59,7 @@ int  CircularBuffer_Get(struct CircularBuffer *self)
     
 int CircularBuffer_Capacity(struct CircularBuffer *self)
 {
-    return 10;
+    return self->capacity;
 }    
     
         
