@@ -11,6 +11,7 @@ struct CircularBuffer
     size_t input_index;
     size_t output_index;
     size_t capacity;
+    int count
     int * values;
     
 };
@@ -37,16 +38,16 @@ bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
   
 bool  CircularBuffer_IsFull(struct CircularBuffer * self)
 {   
+    return self->count==self->capacity;
     
-    int NumberOfElements = sizeof(self->capacity)/sizeof(self->values[0]);
-    return NumberOfElements;
 };
 
 
 void  CircularBuffer_Put(struct CircularBuffer *self, int value)
 {
 
- self->values[self->input_index]=value;;
+ self->values[self->input_index]=value;
+ self->count++;
  self->input_index++;   
 }
 
@@ -54,7 +55,7 @@ int  CircularBuffer_Get(struct CircularBuffer *self)
 {
  int value=self->values[self->output_index];
  self->output_index++;
-    
+ self->count--;   
  return value;   
     
 }    
