@@ -1,10 +1,44 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c: In function 'CircularBuffer_Capacity':
-CircularBuffer.c:61:23: error: expected ')' before 'self'
-   61 |     return sizeof(int(self->values));
-      |                       ^~~~
-      |                       )
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+.
+CircularBufferTest.cpp:157: error: Failure in TEST(CircularBuffer, put_get_is_fifo)
+put_get_is_fifo:157: error:
+	Memory corruption (written out of bounds?)
+   allocated at file: CircularBuffer.c line: 20 size: 12 type: malloc
+   deallocated at file: CircularBuffer.c line: 26 type: free
+
+
+.
+CircularBufferTest.cpp:132: error: Failure in TEST(CircularBuffer, put_get_one_value)
+put_get_one_value:132: error:
+	Memory corruption (written out of bounds?)
+   allocated at file: CircularBuffer.c line: 20 size: 12 type: malloc
+   deallocated at file: CircularBuffer.c line: 26 type: free
+
+
+.
+CircularBufferTest.cpp:108: error: Failure in TEST(CircularBuffer, is_empty_after_put_then_get)
+is_empty_after_put_then_get:108: error:
+	Memory corruption (written out of bounds?)
+   allocated at file: CircularBuffer.c line: 20 size: 12 type: malloc
+   deallocated at file: CircularBuffer.c line: 26 type: free
+
+
+.
+CircularBufferTest.cpp:93: error: Failure in TEST(CircularBuffer, is_not_empty_after_put)
+is_not_empty_after_put:93: error:
+	Memory corruption (written out of bounds?)
+   allocated at file: CircularBuffer.c line: 20 size: 12 type: malloc
+   deallocated at file: CircularBuffer.c line: 26 type: free
+
+
+....
+Errors (4 failures, 8 tests, 8 ran, 9 checks, 0 ignored, 0 filtered out, 0 ms)
+
+CircularBuffer_tests returned 4
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 4
