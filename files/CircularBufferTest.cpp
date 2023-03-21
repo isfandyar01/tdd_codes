@@ -310,7 +310,7 @@ TEST(CircularBuffer, is_not_full_after_get_from_full_buffer)
     CHECK_FALSE(CircularBuffer_IsFull(buffer));
     CircularBuffer_Destroy(buffer);
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
@@ -366,7 +366,7 @@ TEST(CircularBuffer, fill_to_capacity_then_empty)
     CHECK_FALSE(CircularBuffer_IsEmpty(buffer));
     CircularBuffer_Destroy(buffer);
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
