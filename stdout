@@ -2,8 +2,9 @@ compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
 CircularBuffer.c: In function 'CircularBuffer_Capacity':
-CircularBuffer.c:61:18: error: invalid application of 'sizeof' to incomplete type 'int[]'
-   61 |     return sizeof(self->values);
-      |                  ^
+CircularBuffer.c:61:23: error: expected ')' before 'self'
+   61 |     return sizeof(int(self->values));
+      |                       ^~~~
+      |                       )
 compilation terminated due to -Wfatal-errors.
 make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
