@@ -9,12 +9,11 @@
 
 struct CircularBuffer;
 
-struct CircularBuffer * CircularBuffer_Create(size_t capacity, int default_value);
+struct CircularBuffer * CircularBuffer_Create(void);
 void CircularBuffer_Destroy(struct CircularBuffer *);
 bool CircularBuffer_IsEmpty(struct CircularBuffer *);
 bool  CircularBuffer_IsFull(struct CircularBuffer *);
 void  CircularBuffer_Put(struct CircularBuffer *, int);
 int  CircularBuffer_Get(struct CircularBuffer *);
 int CircularBuffer_Capacity(struct CircularBuffer *);
-
 #endif
