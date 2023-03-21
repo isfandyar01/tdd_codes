@@ -1,10 +1,7 @@
 compiling CircularBufferTest.cpp
-compiling AllTests.cpp
-compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-..........
-OK (10 tests, 10 ran, 9 checks, 0 ignored, 0 filtered out, 1 ms)
-
+CircularBufferTest.cpp: In member function 'virtual void TEST_CircularBuffer_is_full_when_filled_to_capacity_Test::testBody()':
+CircularBufferTest.cpp:278:5: error: 'INT_EQUALS' was not declared in this scope
+  278 |     INT_EQUALS(5,CircularBuffer_IsFull(buffer));
+      |     ^~~~~~~~~~
+compilation terminated due to -Wfatal-errors.
+make: *** [/cpputest/build/MakefileWorker.mk:520: objs/CircularBufferTest.o] Error 1
