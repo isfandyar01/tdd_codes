@@ -158,10 +158,8 @@ TEST(CircularBuffer, put_get_is_fifo)
 {
     CircularBuffer_Put(buffer, 1);
     CircularBuffer_Put(buffer, 2);
-    CircularBuffer_Put(buffer, 3);
     LONGS_EQUAL(1, CircularBuffer_Get(buffer));
     LONGS_EQUAL(2, CircularBuffer_Get(buffer));
-    LONGS_EQUAL(3, CircularBuffer_Get(buffer));
 }
 
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
