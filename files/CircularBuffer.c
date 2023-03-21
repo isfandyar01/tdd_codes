@@ -51,7 +51,7 @@ void  CircularBuffer_Put(struct CircularBuffer *self, int value)
  self->values[self->input_index]=value;
  self->count++;
  self->input_index++;
- if(self->input_index>=self->capacity
+ if(self->input_index>=self->capacity)
     {
         self->input_index=0;
     }
