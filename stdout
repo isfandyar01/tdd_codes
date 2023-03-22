@@ -1,9 +1,10 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c: In function 'CircularBuffer_Get':
-CircularBuffer.c:63:2: error: 'intoutalue' undeclared (first use in this function)
-   63 |  intoutalue=self->values[self->output_index];
-      |  ^~~~~~~~~~
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+.............
+OK (13 tests, 13 ran, 13 checks, 0 ignored, 0 filtered out, 0 ms)
+
