@@ -405,7 +405,7 @@ TEST(CircularBuffer, force_a_buffer_wraparound)
     CircularBuffer_Destroy(buffer);
     
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
@@ -430,10 +430,15 @@ TEST(CircularBuffer, force_a_buffer_wraparound)
  * the indexes for deterining empty and full)
  */
 TEST(CircularBuffer, is_not_empty_when_filled_to_capacity)
-{
-    // Write the test
+{ 
+    CircularBuffer * buffer = CircularBuffer_Create(3,0);
+    CircularBuffer_Put(buffer, 1);
+    CircularBuffer_Put(buffer, 2);
+    CircularBuffer_Put(buffer, 3); 
+    CHECK(CircularBuffer_IsEmpty(buffer));
+    CircularBuffer_Destroy(buffer);
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /*
  * Discussion with James about next test:
  * What should we do when putting to a full queue?
