@@ -60,9 +60,13 @@ void  CircularBuffer_Put(struct CircularBuffer *self, int value)
 
 int  CircularBuffer_Get(struct CircularBuffer *self)
 {
- int value=self->values[self->output_index];
+ intoutalue=self->values[self->output_index];
  self->output_index++;
- self->count--;   
+ self->count--; 
+ if(self->output_index>=self->capacity)
+    {
+        self->output_index=0;
+    }   
  return value;   
     
 }    
