@@ -398,7 +398,7 @@ TEST(CircularBuffer, force_a_buffer_wraparound)
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Get(buffer);
     CircularBuffer_Put(buffer, 5);
-    LONGS_EQUAL(2, CircularBuffer_Get(buffer));
+    LONGS_EQUAL(55, CircularBuffer_Get(buffer));
   //  CHECK(CircularBuffer_IsEmpty(buffer));
     CircularBuffer_Destroy(buffer);
     
