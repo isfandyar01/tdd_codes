@@ -435,7 +435,7 @@ TEST(CircularBuffer, is_not_empty_when_filled_to_capacity)
     CircularBuffer_Put(buffer, 1);
     CircularBuffer_Put(buffer, 2);
     CircularBuffer_Put(buffer, 3); 
-    CHECK(CircularBuffer_IsEmpty(buffer));
+    CHECK_FALSE(CircularBuffer_IsEmpty(buffer));
     CircularBuffer_Destroy(buffer);
 }
 #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
