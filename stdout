@@ -5,6 +5,12 @@ Building archive lib/libCircularBuffer.a
 a - objs/CircularBuffer.o
 Linking CircularBuffer_tests
 Running CircularBuffer_tests
-...............
-OK (15 tests, 15 ran, 15 checks, 0 ignored, 0 filtered out, 0 ms)
 
+CircularBufferTest.cpp:458: error: Failure in TEST(CircularBuffer, put_to_full_fails)
+	CHECK(CircularBuffer_Put(buffer, 4)) failed
+
+...............
+Errors (1 failures, 15 tests, 15 ran, 16 checks, 0 ignored, 0 filtered out, 5 ms)
+
+CircularBuffer_tests returned 1
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1
