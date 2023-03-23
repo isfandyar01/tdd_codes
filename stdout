@@ -5,6 +5,6 @@ Building archive lib/libCircularBuffer.a
 a - objs/CircularBuffer.o
 Linking CircularBuffer_tests
 Running CircularBuffer_tests
-..............
-OK (14 tests, 14 ran, 15 checks, 0 ignored, 0 filtered out, 1 ms)
+...............
+OK (15 tests, 15 ran, 15 checks, 0 ignored, 0 filtered out, 0 ms)
 
