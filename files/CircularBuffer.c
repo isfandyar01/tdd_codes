@@ -47,7 +47,8 @@ bool  CircularBuffer_IsFull(struct CircularBuffer * self)
 
 bool CircularBuffer_Put(struct CircularBuffer *self, int value)
 {
- if (CircularBuffer_IsFull(self){
+ if (CircularBuffer_IsFull(self))
+ {
      return false
  }
  self->values[self->input_index]=value;
