@@ -1435,5 +1435,21 @@
       15,
       162803
     ]
+  },
+  {
+    "duration": 2.761489,
+    "colour": "amber",
+    "predicted": "none",
+    "revert_if_wrong": "off",
+    "index": 90,
+    "time": [
+      2023,
+      3,
+      23,
+      16,
+      40,
+      48,
+      666295
+    ]
   }
 ]

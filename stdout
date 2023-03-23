@@ -1,10 +1,10 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-...............
-OK (15 tests, 15 ran, 15 checks, 0 ignored, 0 filtered out, 0 ms)
-
+CircularBuffer.c: In function 'CircularBuffer_Put':
+CircularBuffer.c:50:33: error: expected ')' before '{' token
+   50 |  if (CircularBuffer_IsFull(self){
+      |     ~                           ^
+      |                                 )
+compilation terminated due to -Wfatal-errors.
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1

@@ -45,9 +45,11 @@ bool  CircularBuffer_IsFull(struct CircularBuffer * self)
 };
 
 
-void  CircularBuffer_Put(struct CircularBuffer *self, int value)
+bool CircularBuffer_Put(struct CircularBuffer *self, int value)
 {
-
+ if (CircularBuffer_IsFull(self){
+     return false
+ }
  self->values[self->input_index]=value;
  self->count++;
  self->input_index++;
@@ -55,7 +57,7 @@ void  CircularBuffer_Put(struct CircularBuffer *self, int value)
     {
         self->input_index=0;
     }
-    
+ return true   
 }
 
 int  CircularBuffer_Get(struct CircularBuffer *self)
