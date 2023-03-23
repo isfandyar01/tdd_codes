@@ -482,6 +482,7 @@ TEST(CircularBuffer, put_to_full_does_not_damage_contents)
      CircularBuffer_Get(buffer);
      CircularBuffer_Get(buffer);
    LONGS_EQUAL(3, CircularBuffer_Get(buffer));
+     CircularBuffer_Destroy(buffer);
 }
 
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
