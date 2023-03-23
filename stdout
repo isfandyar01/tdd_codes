@@ -5,30 +5,12 @@ Building archive lib/libCircularBuffer.a
 a - objs/CircularBuffer.o
 Linking CircularBuffer_tests
 Running CircularBuffer_tests
-
-CircularBufferTest.cpp:472: error: Failure in TEST(CircularBuffer, put_to_full_does_not_damage_contents)
-	Memory leak(s) found.
-Alloc num (7) Leak size: 12 Allocated at: CircularBuffer.c and line: 22. Type: "malloc"
-	Memory: <0x7fa551480ba0> Content:
-    0000: 01 00 00 00 02 00 00 00  03 00 00 00             |............|
-Alloc num (6) Leak size: 40 Allocated at: CircularBuffer.c and line: 21. Type: "malloc"
-	Memory: <0x7fa551210cf0> Content:
-    0000: 00 00 00 00 00 00 00 00  01 00 00 00 00 00 00 00 |................|
-    0010: 03 00 00 00 00 00 00 00  02 00 00 00 00 00 00 00 |................|
-    0020: a0 0b 48 51 a5 7f 00 00                          |..HQ....|
-Total number of leaks:  2
-NOTE:
-	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
-	but deallocate using the standard free.
-	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
-
-
 .
 CircularBufferTest.cpp:458: error: Failure in TEST(CircularBuffer, put_to_full_fails)
 	CHECK(CircularBuffer_Put(buffer, 4)) failed
 
 ...............
-Errors (2 failures, 16 tests, 16 ran, 17 checks, 0 ignored, 0 filtered out, 3 ms)
+Errors (1 failures, 16 tests, 16 ran, 17 checks, 0 ignored, 0 filtered out, 2 ms)
 
-CircularBuffer_tests returned 2
-make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 2
+CircularBuffer_tests returned 1
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1

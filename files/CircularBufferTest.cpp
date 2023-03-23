@@ -476,6 +476,7 @@ TEST(CircularBuffer, put_to_full_does_not_damage_contents)
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Put(buffer, 4);
     LONGS_EQUAL(1, CircularBuffer_Get(buffer));
+ CircularBuffer_Destroy(buffer);
 }
 #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
