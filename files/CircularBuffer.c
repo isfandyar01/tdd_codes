@@ -12,6 +12,7 @@ struct CircularBuffer
     size_t output_index;
     size_t capacity;
     int count;
+    int default_values;
     int * values;
     
 };
@@ -21,6 +22,7 @@ struct CircularBuffer * CircularBuffer_Create(int capacity,int default_value)
     struct CircularBuffer * self = (struct CircularBuffer *)calloc(1, sizeof(struct CircularBuffer));
     self->values = malloc(capacity * sizeof(int));
     self->capacity = capacity;
+    self->default_values=default_value;
     return self;
 }
 
