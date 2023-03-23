@@ -1,12 +1,50 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c: In function 'CircularBuffer_Get':
-CircularBuffer.c:69:33: error: expected ')' before '{' token
-   69 |  if(CircularBuffer_IsEmpty(self)
-      |    ~                            ^
-      |                                 )
-   70 |  {
-      |  ~                               
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+................
+OK (16 tests, 16 ran, 16 checks, 0 ignored, 0 filtered out, 0 ms)
+
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+!!                                                        !!
+!!          YOUR CODE GOT AHEAD OF YOUR TESTS!            !!
+!!                                                        !!
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+    
+You get this message when you write code that is not yet exercised by
+your current test cases.
+
+The coverage report below may show
+
+ * "LINE NEVER EXECUTED" 
+ * "BRANCH NEVER TAKEN IN PREVIOUS CONDITIONAL"
+
+Delete (or comment out) the code that is not yet needed.
+
+Try to avoid getting this message by doing TDD!
+  Work in small steps
+  Write a test
+  Watch it fail (maybe due to build errors)
+  Make it pass with the simplest implementation
+  Continue
+
+See the exercise hints
+--------------------------------------------------------------
+        -:   48:
+        -:   49:
+       28:   50:bool CircularBuffer_Put(struct CircularBuffer *self, int value)
+        -:   51:{
+       28:   52: if (CircularBuffer_IsFull(self))
+        -:   53: {
+    #####:   54:     return false ; <<<<---- LINE NEVER EXECUTED ----<<<<
+        -:   55: }
+       28:   56: self->values[self->input_index]=value;
+       28:   57: self->count++;
+       28:   58: self->input_index++;
+       28:   59: if(self->input_index>=self->capacity)
+        -:   60:    {
+--------------------------------------------------------------
