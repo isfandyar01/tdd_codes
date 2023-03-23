@@ -5,46 +5,26 @@ Building archive lib/libCircularBuffer.a
 a - objs/CircularBuffer.o
 Linking CircularBuffer_tests
 Running CircularBuffer_tests
+.
+CircularBufferTest.cpp:473: error: Failure in TEST(CircularBuffer, put_to_full_does_not_damage_contents)
+	Memory leak(s) found.
+Alloc num (12) Leak size: 12 Allocated at: CircularBuffer.c and line: 23. Type: "malloc"
+	Memory: <0x7f914399fc40> Content:
+    0000: 01 00 00 00 02 00 00 00  03 00 00 00             |............|
+Alloc num (11) Leak size: 40 Allocated at: CircularBuffer.c and line: 22. Type: "malloc"
+	Memory: <0x7f9143a37fb0> Content:
+    0000: 00 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 |................|
+    0010: 03 00 00 00 00 00 00 00  00 00 00 00 00 00 00 00 |................|
+    0020: 40 fc 99 43 91 7f 00 00                          |@..C....|
+Total number of leaks:  2
+NOTE:
+	Memory leak reports about malloc and free can be caused by allocating using the cpputest version of malloc,
+	but deallocate using the standard free.
+	If this is the case, check whether your malloc/free replacements are working (#define malloc cpputest_malloc etc).
+
+
 ................
-OK (16 tests, 16 ran, 16 checks, 0 ignored, 0 filtered out, 0 ms)
+Errors (1 failures, 17 tests, 17 ran, 17 checks, 0 ignored, 0 filtered out, 0 ms)
 
-
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-!!                                                        !!
-!!          YOUR CODE GOT AHEAD OF YOUR TESTS!            !!
-!!                                                        !!
-!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    
-You get this message when you write code that is not yet exercised by
-your current test cases.
-
-The coverage report below may show
-
- * "LINE NEVER EXECUTED" 
- * "BRANCH NEVER TAKEN IN PREVIOUS CONDITIONAL"
-
-Delete (or comment out) the code that is not yet needed.
-
-Try to avoid getting this message by doing TDD!
-  Work in small steps
-  Write a test
-  Watch it fail (maybe due to build errors)
-  Make it pass with the simplest implementation
-  Continue
-
-See the exercise hints
---------------------------------------------------------------
-        -:   48:
-        -:   49:
-       28:   50:bool CircularBuffer_Put(struct CircularBuffer *self, int value)
-        -:   51:{
-       28:   52: if (CircularBuffer_IsFull(self))
-        -:   53: {
-    #####:   54:     return false ; <<<<---- LINE NEVER EXECUTED ----<<<<
-        -:   55: }
-       28:   56: self->values[self->input_index]=value;
-       28:   57: self->count++;
-       28:   58: self->input_index++;
-       28:   59: if(self->input_index>=self->capacity)
-        -:   60:    {
---------------------------------------------------------------
+CircularBuffer_tests returned 1
+make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 1
