@@ -459,7 +459,7 @@ TEST(CircularBuffer, put_to_full_fails)
     //CircularBuffer_Put(buffer, 8);
     CircularBuffer_Destroy(buffer);
 }
-#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
+
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 
@@ -470,10 +470,14 @@ TEST(CircularBuffer, put_to_full_fails)
  */
 
 TEST(CircularBuffer, put_to_full_does_not_damage_contents)
-{
-    //Write the test
+{   CircularBuffer * buffer = CircularBuffer_Create(3,0);
+    CircularBuffer_Put(buffer, 1);
+    CircularBuffer_Put(buffer, 2);
+    CircularBuffer_Put(buffer, 3);
+    CircularBuffer_Put(buffer, 4);
+    LONGS_EQUAL(1, CircularBuffer_Get(buffer));
 }
-
+#ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
 /* PLEASE DELETE PREVIOUS COMMENTS AS YOU GET TESTS TO PASS */
 
 /*
