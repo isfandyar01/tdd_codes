@@ -456,6 +456,7 @@ TEST(CircularBuffer, put_to_full_fails)
     CircularBuffer_Put(buffer, 2);
     CircularBuffer_Put(buffer, 3);
     CircularBuffer_Put(buffer, 4);
+    CircularBuffer_Put(buffer, 8);
     CircularBuffer_Destroy(buffer);
 }
 #ifdef Move_this_line_down_one_test_to_simulate_james_writing_the_test
