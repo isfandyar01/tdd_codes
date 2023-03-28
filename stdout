@@ -1,12 +1,10 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-CircularBuffer.c: In function 'CircularBuffer_Put':
-CircularBuffer.c:68:15: error: expected ';' before 'self'
-   68 |  self->count++
-      |               ^
-      |               ;
-   69 |  self->input_index=nextIndex(self,self->input_index);
-      |  ~~~~          
-compilation terminated due to -Wfatal-errors.
-make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
+Building archive lib/libCircularBuffer.a
+a - objs/CircularBuffer.o
+Linking CircularBuffer_tests
+Running CircularBuffer_tests
+.................
+OK (17 tests, 17 ran, 17 checks, 0 ignored, 0 filtered out, 0 ms)
+

@@ -65,7 +65,7 @@ bool CircularBuffer_Put(struct CircularBuffer *self, int value)
      return false ;
  }
  self->values[self->input_index]=value;
- self->count++
+ self->count++;
  self->input_index=nextIndex(self,self->input_index);   
  return true ;  
 }
