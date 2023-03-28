@@ -17,10 +17,19 @@ struct CircularBuffer
     
 };
 
+
+static size_t nextIndex(struct CircularBuffer * self, size_t index)
+{
+    index++;
+    if (index >= self->capacity+1)
+        index = 0;
+    return index;
+}
+
 struct CircularBuffer * CircularBuffer_Create(int capacity,int default_value)
 {
     struct CircularBuffer * self = (struct CircularBuffer *)calloc(1, sizeof(struct CircularBuffer));
-    self->values = malloc(capacity * sizeof(int));
+    self->values = malloc((capacity+1) * sizeof(int));
     self->capacity = capacity;
     self->default_values=default_value;
     return self;
@@ -36,13 +45,15 @@ void CircularBuffer_Destroy(struct CircularBuffer * self)
 
 bool CircularBuffer_IsEmpty(struct CircularBuffer *self)
 {
-
-    return self->count==0;
+    
+    return self->input_index==self->output_index;
 };
   
 bool  CircularBuffer_IsFull(struct CircularBuffer * self)
 {   
-    return self->count==self->capacity;
+    
+    return nextIndex(self,self->input_index)==self->output_index;
+    //return self->count==self->capacity;
     
 };
 
@@ -56,10 +67,7 @@ bool CircularBuffer_Put(struct CircularBuffer *self, int value)
  self->values[self->input_index]=value;
  self->count++;
  self->input_index++;
- if(self->input_index>=self->capacity)
-    {
-        self->input_index=0;
-    }
+ self->input_index=nextIndex(self,self->input_index);   
  return true ;  
 }
 
@@ -73,10 +81,7 @@ int  CircularBuffer_Get(struct CircularBuffer *self)
  int value=self->values[self->output_index];
  self->output_index++;
  self->count--; 
- if(self->output_index>=self->capacity)
-    {
-        self->output_index=0;
-    }   
+ self->input_output=nextIndex(self,self->output_index); 
  return value;   
     
 }    
