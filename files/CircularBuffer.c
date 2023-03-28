@@ -65,8 +65,7 @@ bool CircularBuffer_Put(struct CircularBuffer *self, int value)
      return false ;
  }
  self->values[self->input_index]=value;
- self->count++;
- self->input_index++;
+ self->count++
  self->input_index=nextIndex(self,self->input_index);   
  return true ;  
 }
@@ -79,8 +78,7 @@ int  CircularBuffer_Get(struct CircularBuffer *self)
   return self->default_values;    
  }
  int value=self->values[self->output_index];
- self->output_index++;
- self->count--; 
+ self->count--;   
  self->output_index=nextIndex(self,self->output_index); 
  return value;   
     

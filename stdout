@@ -1,28 +1,12 @@
 compiling CircularBufferTest.cpp
 compiling AllTests.cpp
 compiling CircularBuffer.c
-Building archive lib/libCircularBuffer.a
-a - objs/CircularBuffer.o
-Linking CircularBuffer_tests
-Running CircularBuffer_tests
-.
-CircularBufferTest.cpp:484: error: Failure in TEST(CircularBuffer, put_to_full_does_not_damage_contents)
-	LONGS_EQUAL(3, CircularBuffer_Get(buffer)) failed
-	expected <3 (0x3)>
-	but was  <0 (0x0)>
-
-......
-CircularBufferTest.cpp:279: error: Failure in TEST(CircularBuffer, is_full_when_filled_to_capacity)
-	CHECK_TRUE(CircularBuffer_IsFull(buffer)) failed
-
-...
-CircularBufferTest.cpp:162: error: Failure in TEST(CircularBuffer, put_get_is_fifo)
-	LONGS_EQUAL(2, CircularBuffer_Get(buffer)) failed
-	expected <2 (0x2)>
-	but was  <0 (0x0)>
-
-.......
-Errors (3 failures, 17 tests, 17 ran, 17 checks, 0 ignored, 0 filtered out, 3 ms)
-
-CircularBuffer_tests returned 3
-make: *** [/cpputest/build/MakefileWorker.mk:506: test] Error 3
+CircularBuffer.c: In function 'CircularBuffer_Put':
+CircularBuffer.c:68:15: error: expected ';' before 'self'
+   68 |  self->count++
+      |               ^
+      |               ;
+   69 |  self->input_index=nextIndex(self,self->input_index);
+      |  ~~~~          
+compilation terminated due to -Wfatal-errors.
+make: *** [/cpputest/build/MakefileWorker.mk:525: objs/CircularBuffer.o] Error 1
